@@ -5,7 +5,11 @@
   --Dark-grayish-blue: hsl(228, 12%, 48%);
   --White: hsl(0, 0%, 100%);
 }
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -16,4 +20,138 @@
 
 body {
   background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.product {
+  display: flex;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 500px;
+  width: 700px;
+}
+img {
+  background-image: url("./images/image-product-desktop.jpg");
+  width: 50%;
+  height: auto;
+}
+.description {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding:35px 35px;
+  width: 50%;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: var(--Dark-grayish-blue);
+}
+h1 {
+  line-height: 40px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  margin: 15px 0;
+  font-size: 35px;
+}
+p{
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+}
+p.prod-info{
+  line-height: 25px;
+}
+p.price{
+  font-family: "Fraunces", serif;
+  display: inline-block;
+  font-size: 35px;
+  color: var(--dark-cyan);
+  margin: 0;
+}
+p.old-price{
+  text-decoration:line-through;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: 30px;
+  color: var(--Dark-grayish-blue);
+  margin: 0;
+}
+div.cart{
+  background-color: var(--dark-cyan);
+  margin:  0 auto ;
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 22px 0 auto 0;
+  overflow:hidden;
+}
+a{
+  padding: 20px 10px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--White);
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  
+}
+div.cart :hover{
+  background-color: var(--very-dark-blue);
+}
+svg{
+  position: relative;
+  top: 3px;
+  right: 5px;
+  margin: auto;
+}
+@media only screen and (max-width:655px) {
+  .product{
+    height: 635px;
+    width: 350px;
+    flex-direction: column;
+  }
+  img{
+    width: 100%;
+    height: 40%;
+    object-fit: cover
+  }
+  .description{
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+  }
+  br{
+    display: none;
+  }
+  h1{
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  p{
+    margin: 10px 0 0 0
+    line-height: 10px
+  }
+  div.cart{
+    margin: 10px 5px;
+    display: flex;
+    align-items: center;
+  }
+  a{
+    padding: 15px;
+  }
 }
